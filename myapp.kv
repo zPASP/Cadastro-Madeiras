@@ -1,0 +1,53 @@
+<Gerenciador>:
+    CadMadeira:
+        name: 'cadastromadeira'
+    Clicou:
+        name: 'clicou'
+    Menu:
+        name: 'menu'
+        
+<Menu>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Hello World'
+        Button:
+            text: 'CLIQUE AQUI'
+            on_release: app.root.current = 'clicou'
+
+<Clicou>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Chegou'
+        Button:
+            text: 'BOTÃO'
+            on_release: print('clicou')
+            on_press: root.manager.current = 'menu'
+            ##on_release: app.root.current = 'menu'
+
+<CadMadeira>
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '30sp'
+        Label:
+            padding: '30sp','10sp'
+            size: '50sp', '50sp'
+            text: 'CADASTRO DE MADEIRA'
+            font_size: '50sp'
+        BoxLayout:
+            padding: '60sp','30sp'
+            Spinner:
+                size: '200sp','50sp'
+                id: tipoMadeira
+                text: 'TIPO'
+                values: ["PINUS", "EUCALIPTO"]
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    text: 'NOME'
+                    font_size: '40sp'
+                TextInput:
+                    id: nomeMadeira
+        Button:
+            text: 'SALVAR'
