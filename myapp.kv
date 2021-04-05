@@ -1,35 +1,50 @@
 <Gerenciador>:
-    CadMadeira:
-        name: 'cadastromadeira'
-    Clicou:
-        name: 'clicou'
     Menu:
         name: 'menu'
-        
+    CadMadeira:
+        name: 'cadastro_madeira'
+    ModificaMadeira:
+        name: 'modifica_madeira'
+ 
 <Menu>:
     BoxLayout:
         orientation: 'vertical'
-        Label:
-            text: 'Hello World'
-        Button:
-            text: 'CLIQUE AQUI'
-            on_release: app.root.current = 'clicou'
-
-<Clicou>:
-    BoxLayout:
-        orientation: 'vertical'
-        Label:
-            text: 'Chegou'
-        Button:
-            text: 'BOTÃO'
-            on_release: print('clicou')
-            on_press: root.manager.current = 'menu'
-            ##on_release: app.root.current = 'menu'
+        ActionBar:
+            ActionView:
+                ActionPrevious:
+                    title: 'FORTALEZA APP'
+                    on_release: app.root.current = 'menu'
+                ActionButton:
+                    text: 'MENU'
+                    on_release: app.root.current = 'menu'
+        GridLayout:
+            rows: 2
+            Label:
+                text: 'Cadastro de Madeira'
+                font_size: '30sp'
+            Button:
+                text: 'CLIQUE AQUI'
+                on_release: app.root.current = 'cadastro_madeira'
+            Label:
+                text: 'Cadastro Modificação'
+                font_size: '30sp'
+            Button:
+                text: '1'
+                on_release: app.root.current = 'modifica_madeira'
 
 <CadMadeira>
     BoxLayout:
         orientation: 'vertical'
         spacing: '30sp'
+        ActionBar:
+            ActionView:
+                ActionPrevious:
+                    title: 'FORTALEZA APP'
+                    on_release: app.root.current = 'menu'
+                ActionButton:
+                    text: 'MENU'
+                    on_release: app.root.current = 'menu'
+                    
         Label:
             padding: '30sp','10sp'
             size: '50sp', '50sp'
