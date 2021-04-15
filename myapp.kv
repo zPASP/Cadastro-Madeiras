@@ -5,6 +5,8 @@
         name: 'cadastro_madeira'
     ModificaMadeira:
         name: 'modifica_madeira'
+    ModificacaoDia:
+        name: 'modificacao_dia'
  
 <Menu>:
     BoxLayout:
@@ -18,19 +20,19 @@
                     text: 'MENU'
                     on_release: app.root.current = 'menu'
         GridLayout:
-            rows: 2
-            Label:
+            rows: 1
+            Button:
                 text: 'Cadastro de Madeira'
                 font_size: '30sp'
-            Button:
-                text: 'CLIQUE AQUI'
                 on_release: app.root.current = 'cadastro_madeira'
-            Label:
+            Button:
                 text: 'Cadastro Modificação'
                 font_size: '30sp'
-            Button:
-                text: '1'
                 on_release: app.root.current = 'modifica_madeira'
+            Button:
+                text: 'Madeiras Modificadas'
+                font_size: '30sp'
+                on_release: app.root.current = 'modificacao_dia'
 
 <CadMadeira>
     BoxLayout:
@@ -56,7 +58,7 @@
                 size: '200sp','50sp'
                 id: tipoMadeira
                 text: 'TIPO'
-                values: ["PINUS", "EUCALIPTO"]
+                values: root.tipoMadeira
             BoxLayout:
                 orientation: 'vertical'
                 Label:
@@ -66,3 +68,42 @@
                     id: nomeMadeira
         Button:
             text: 'SALVAR'
+<ModificaMadeira>
+    BoxLayout:
+        orientation: 'vertical'
+        ActionBar:
+            ActionView:
+                ActionPrevious:
+                    title: 'FORTALEZA APP'
+                    on_release: app.root.current = 'menu'
+                ActionButton:
+                    text: 'MENU'
+                    on_release: app.root.current = 'menu'
+        Label:
+            text: 'QUAL MADEIRA UTILIZADA:'
+            font_size: '30sp'
+        Spinner:
+            text: 'SELECIONAR'
+            values: '1'
+        Button:
+            text: 'SALVAR'
+
+<ModificacaoDia>
+    BoxLayout:
+        orientation: 'vertical'
+        ActionBar:
+            ActionView:
+                ActionPrevious:
+                    title: 'FORTALEZA APP'
+                    on_release: app.root.current = 'menu'
+                ActionButton:
+                    text: 'MENU'
+                    on_release: app.root.current = 'menu'
+        Label:
+            text: 'MADEIRA PARA CADASTRAR MODIFICAÇÃO'
+            font_size: '25sp'
+        Label:
+            text: '2 - PINUS 5x5 | 4 - PINUS 2,5x2,5'
+            font_size: '19sp'
+
+    

@@ -12,9 +12,14 @@ class Menu(Screen):
     pass
 
 class CadMadeira(Screen):
+    tipoMadeira = ['PINUS', 'EUCALIPTO']
     pass
 
 class ModificaMadeira(Screen):
+    tipoMadeira = CadMadeira.tipoMadeira 
+    pass
+
+class ModificacaoDia(Screen):
     pass
 
 class Clicou(Screen):
