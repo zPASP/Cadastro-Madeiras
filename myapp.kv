@@ -1,8 +1,9 @@
 <Gerenciador>:
-    Menu:
-        name: 'menu'
     CadMadeira:
         name: 'cadastro_madeira'
+    Menu:
+        name: 'menu'
+    
     ModificaMadeira:
         name: 'modifica_madeira'
     ModificacaoDia:
@@ -20,7 +21,7 @@
                     text: 'MENU'
                     on_release: app.root.current = 'menu'
         GridLayout:
-            rows: 1
+            rows: 3
             Button:
                 text: 'Cadastro de Madeira'
                 font_size: '20sp'
@@ -41,33 +42,41 @@
         ActionBar:
             ActionView:
                 ActionPrevious:
-                    title: 'FORTALEZA APP'
+                    title: 'CADASTRO DE MADEIRA'
+                    font_size: '20sp'
                     on_release: app.root.current = 'menu'
                 ActionButton:
-                    text: 'MENU'
+                    text: 'LIMPAR'
                     on_release: app.root.current = 'menu'
                     
-        Label:
-            padding: '30sp','10sp'
-            size: '50sp', '50sp'
-            text: 'CADASTRO DE MADEIRA'
-            font_size: '50sp'
+       # Label:
+       #     text: 'CADASTRO DE MADEIRA'
+       #     font_size: '50sp'
+       #     bold: True #negrito
         BoxLayout:
-            padding: '60sp','30sp'
+            #padding: '60sp','30sp'
+            padding: '10sp'
+            orientation: 'vertical'
+            #size_hint_y: None
             Spinner:
-                size: '200sp','50sp'
+                size: .9 , .5
+                font_size: (80/100)*self.height
                 id: tipoMadeira
                 text: 'TIPO'
                 values: root.tipoMadeira
             BoxLayout:
-                orientation: 'vertical'
-                Label:
-                    text: 'NOME'
-                    font_size: '40sp'
                 TextInput:
+                    size: 
                     id: nomeMadeira
+                    font_size: (75/100)*self.height
+                    multiline: False
+                    #password: True
         Button:
+            size_hint: 0.3, 0.2
+            pos_hint: {'center_x': .5 , 'top': .5}
             text: 'SALVAR'
+        #Switch:
+            #id: escolha
 <ModificaMadeira>
     BoxLayout:
         orientation: 'vertical'
@@ -94,16 +103,28 @@
         ActionBar:
             ActionView:
                 ActionPrevious:
-                    title: 'FORTALEZA APP'
+                    title: 'MADEIRAS MODIFICADAS'
                     on_release: app.root.current = 'menu'
                 ActionButton:
                     text: 'MENU'
                     on_release: app.root.current = 'menu'
-        Label:
-            text: 'MADEIRA PARA CADASTRAR MODIFICAÇÃO'
-            font_size: '25sp'
-        Label:
-            text: '2 - PINUS 5x5 | 4 - PINUS 2,5x2,5'
-            font_size: '19sp'
+        ScrollView:
+            BoxLayout:
+                id: tex_modificacoes
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height 
+
+<MostraMadeira>
+    size_hint_y: None
+    height: '100sp'
+    Label:
+        id: label
+        font_size: '20sp'
+    Button:
+        text: 'X'
+        size_hint_x: None
+        width: '40sp'
+        on_release: app.root.get_screen('modificacaoDia').removeWidget(self.parent)                    
 
     
