@@ -15,12 +15,10 @@ RELATORIO DIARIO DE DESENVOLVIMENTO.
     * No aplicativo estou fazendo a intercafe das janelas que terá no sistema inicialmente 4 paginas terá..
 * [DIA 2](#dia2)
     * Apredizagem de escrita do arquivo README.MD que fica no Github para deixar com uma cara melhor.
-<<<<<<< HEAD
 * [DIA 3](#dia3)
     * Estudo de funcionamento de arquivos JSON e como posso utilizar ele em meus projetos para não perder informações todo vez que ele for encerrado..
 =======
 
->>>>>>> 862e07abc264233a6e31ab1be646d072d0850cd4
 <!--te-->
 
 ___
