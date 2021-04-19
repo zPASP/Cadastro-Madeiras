@@ -7,6 +7,7 @@ from kivy.properties import ListProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen, ScreenManager
 import json
+from datetime import date
 
 
 class Gerenciador(ScreenManager):
@@ -15,8 +16,28 @@ class Gerenciador(ScreenManager):
 class Menu(Screen):
     pass
 
+class DesData():
+    data_dia_inteira = date.today()
+    #data_dia
+
+    pass
+
 class CadMadeira(Screen):
-    tipoMadeira = ['PINUS', 'EUCALIPTO']
+    tipoMadeira = []
+    path = ''
+
+    
+
+    def on_pre_enter(self):
+        self.path = App.get_running_app().user_data_dir+'/cadmadeira/'
+        print(self.path)
+       # print(DesData.data_dia)
+    
+    #def loadData(self,*args):
+    #    try:
+    #        with open(self.path+ )
+
+
     pass
 
 class ModificaMadeira(Screen):
