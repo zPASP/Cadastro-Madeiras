@@ -17,8 +17,10 @@ class Menu(Screen):
     pass
 
 class DesData():
-    data_dia_inteira = date.today()
-    #data_dia
+    data =date.today()
+    dia = data.strftime("%d")
+    mes = data.strftime("%m")
+    ano = data.strftime("%Y")
 
     pass
 
@@ -30,15 +32,18 @@ class CadMadeira(Screen):
 
     def on_pre_enter(self):
         self.path = App.get_running_app().user_data_dir+'/cadmadeira/'
-        print(self.path)
-       # print(DesData.data_dia)
+        print(self.path)    
+        print(DesData.dia)
+        print(self.verificaArquivo())
+
+    def verificaArquivo(self):
+        try:
+            f = open(self.path+self.DesData.data+'.'+json)
+            f.close
+            return (True)
+        except:
+            return (False)
     
-    #def loadData(self,*args):
-    #    try:
-    #        with open(self.path+ )
-
-
-    pass
 
 class ModificaMadeira(Screen):
     tipoMadeira = CadMadeira.tipoMadeira 
