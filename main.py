@@ -28,8 +28,6 @@ class ModificacaoDia(Screen):
         for madeira in self.madeiras:
             self.ids.tex_modificacoes.add_widget(MostraMadeira(text=madeira))
     
-    
-
 class MostraMadeira(BoxLayout) :
     def __init__(self,text='',**kwargs):
         super().__init__(**kwargs)
