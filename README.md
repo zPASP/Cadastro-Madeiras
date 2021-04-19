@@ -16,7 +16,7 @@ RELATORIO DIARIO DE DESENVOLVIMENTO.
 * [DIA 2](#dia2)
     * Apredizagem de escrita do arquivo README.MD que fica no Github para deixar com uma cara melhor.
 * [DIA 3](#dia3)
-    * Estudo de funcionamento de arquivos JSON e como posso utilizar ele em meus projetos para não perder informações todo vez que ele for encerrado..
+    * Estudo de funcionamento de arquivos JSON e como posso utilizar ele em meus projetos para não perder informações todo vez que ele for encerrado....
 
 <!--te-->
 

@@ -6,6 +6,8 @@ from kivy.core.window import Window
 from kivy.properties import ListProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen, ScreenManager
+import json
+
 
 class Gerenciador(ScreenManager):
     pass
