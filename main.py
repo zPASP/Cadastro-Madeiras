@@ -34,11 +34,14 @@ class CadMadeira(Screen):
         self.path = App.get_running_app().user_data_dir+'/cadmadeira/'
         print(self.path)    
         print(DesData.dia)
-        print(self.verificaArquivo())
+        if (self.verificaArquivo()):
+            with open(self.path+self.DesData.data+'.json','w') as f:
+                json.dump(tipoMadeira,f)
+        
 
     def verificaArquivo(self):
         try:
-            f = open(self.path+self.DesData.data+'.'+json)
+            f = open(self.path+self.DesData.data+'.json')
             f.close
             return (True)
         except:
