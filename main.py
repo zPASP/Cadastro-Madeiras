@@ -25,7 +25,7 @@ class DesData():
     pass
 
 class CadMadeira(Screen):
-    tipoMadeira = []
+    tipoMadeira = ['PINUS','EUCALIPTO']
     path = ''
 
     
@@ -36,7 +36,7 @@ class CadMadeira(Screen):
         print(DesData.dia)
         if (self.verificaArquivo()):
             with open(self.path+self.DesData.data+'.json','w') as f:
-                json.dump(tipoMadeira,f)
+                json.dump(self.tipoMadeira,f)
         
 
     def verificaArquivo(self):
