@@ -33,16 +33,24 @@ class CadMadeira(Screen):
 
     def on_pre_enter(self,*args):
         self.path = App.get_running_app().user_data_dir+'/'
+        self.carregarData()
         print(self.path)    
         print(DesData.dia)
         print(DesData.data_string)
         self.pastaDia()
-        with open(str(DesData.data)+'.json','w') as f:
+        with open(self.path+DesData.data_string+'/'+str(DesData.data)+'.json','w') as f:
             json.dump(self.modelosMadeiras,f)
 
     def saveData(self,*args):
-        with open(str(DesData.data)+'.json','w') as f:
+        with open(self.path+DesData.data_string+'/'+str(DesData.data)+'.json','w') as f:
             json.dump(self.modelosMadeiras,f)
+
+    def carregarData(self,*args):
+        try:
+            with open(self.path+DesData.data_string+'/'+str(DesData.data)+'.json','r') as f:
+                self.modelosMadeiras = json.load(f)
+        except FileNotFoundError:
+            pass
 
     def salvarMadeira(self):
         modelo = (self.ids.tipoMadeira.text+' - '+self.ids.nomeMadeira.text)
