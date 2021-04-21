@@ -8,7 +8,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen, ScreenManager
 import json
 from datetime import date
-
+import os
 
 
 class Gerenciador(ScreenManager):
@@ -19,6 +19,7 @@ class Menu(Screen):
 
 class DesData():
     data = date.today()
+    data_string = str(data)
     dia = data.strftime("%d")
     mes = data.strftime("%m")
     ano = data.strftime("%Y")
@@ -31,9 +32,11 @@ class CadMadeira(Screen):
     path = ''
 
     def on_pre_enter(self,*args):
-        self.path = App.get_running_app().user_data_dir+'/cadmadeira/'
+        self.path = App.get_running_app().user_data_dir+'/'
         print(self.path)    
         print(DesData.dia)
+        print(DesData.data_string)
+        self.pastaDia()
         with open(str(DesData.data)+'.json','w') as f:
             json.dump(self.modelosMadeiras,f)
 
@@ -46,6 +49,14 @@ class CadMadeira(Screen):
         self.ids.nomeMadeira.text = ''
         self.modelosMadeiras.append(modelo)
         self.saveData()
+
+    def pastaDia(self):
+        pastadoDia = self.path+DesData.data_string
+
+        if not os.path.exists(pastadoDia):
+            os.makedirs(pastadoDia)
+        
+
 
 
 class ModificaMadeira(Screen):
