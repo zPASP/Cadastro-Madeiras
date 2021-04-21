@@ -68,11 +68,17 @@ class CadMadeira(Screen):
 
 
 class ModificaMadeira(Screen):
+
+
     pass
 
 class ModificacaoDia(Screen):
     def on_pre_enter(self):
         print('ENTROU')
+
+        loadData(self):
+            
+
         for madeira in self.madeiras:
             self.ids.tex_modificacoes.add_widget(MostraMadeira(text=madeira))
     
