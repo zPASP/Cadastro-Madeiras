@@ -42,7 +42,7 @@ class CadMadeira(Screen):
             json.dump(self.modelosMadeiras,f)
 
     def salvarMadeira(self):
-        modelo = (self.ids.tipoMadeira.text,' - ', self.ids.nomeMadeira.text)
+        modelo = (self.ids.tipoMadeira.text+' - '+self.ids.nomeMadeira.text)
         self.ids.nomeMadeira.text = ''
         self.modelosMadeiras.append(modelo)
         self.saveData()
