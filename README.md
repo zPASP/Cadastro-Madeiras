@@ -20,9 +20,9 @@ RELATORIO DIARIO DE DESENVOLVIMENTO.
 * [DIA 4](#dia4)
     * Aplicação para alguns empregos na area no cargo de estagiario e para fazer os desafios logicos existentes como parte de teste do processo. A principal ideia em fazer essas aplicações foi em fazer um comparativo em uma posição onde não estou programando com frequencia e no final irie comparar o meu desempenho atual com o futuro. Todos os teste não dão resultado porem pude perceber a dificuldade na parte de conhecimentos espesificos em suas linguagens, como Python e JavaScript.
 * [DIA 5](#dia5)
-    Estudo do codigo já feito e percebido a necessidade de algumas alterações, após serem feitas as pequenas mudanças começei voltei a programar no codigo. O json estava funcionando apenas na pasta temporaria do aplicativo a qual não conseguiria persistencia nos dados, estava dando erro ao salvar no padrão que queria. Tentei um lib a qual não estava liberando acesso a pasta do sistema do aplicativo estava dando erro.
+    * Estudo do codigo já feito e percebido a necessidade de algumas alterações, após serem feitas as pequenas mudanças começei voltei a programar no codigo. O json estava funcionando apenas na pasta temporaria do aplicativo a qual não conseguiria persistencia nos dados, estava dando erro ao salvar no padrão que queria. Tentei um lib a qual não estava liberando acesso a pasta do sistema do aplicativo estava dando erro.
 * [DIA 6](#dia6)
-    Inicio pesquisando e estudando as lib de criação de pastas e arquivos então encontrei uma a qual permitia o tipo de modificação que estava querendo, fiz os testes e funcionou, então começei a aplicar ela ao meu codigo. Funcionou e tive a persistencia em meus dados.
+    * Inicio pesquisando e estudando as lib de criação de pastas e arquivos então encontrei uma a qual permitia o tipo de modificação que estava querendo, fiz os testes e funcionou, então começei a aplicar ela ao meu codigo. Funcionou e tive a persistencia em meus dados.
 
 <!--te-->
 
