@@ -29,7 +29,7 @@ RELATORIO DIARIO DE DESENVOLVIMENTO.
 ___
 
 ### DESAFIOS
-[ x ]DIA 1 - [ x ]DIA 2  - [ x ]DIA 3  - [ x ]DIA 4 - [ x ]DIA 5 <br> [ x ]DIA 6  - [ ]DIA 7  - [ ]DIA 8  - [ ]DIA 9  - [ ]DIA 10 <br>
+[ x ]DIA 1 - [ x ]DIA 2  - [ x ]DIA 3  - [ x ]DIA 4 - [ x ]DIA 5 <br> [ x ]DIA 6  - [ x ]DIA 7  - [ ]DIA 8  - [ ]DIA 9  - [ ]DIA 10 <br>
 [ ]DIA 11 - [ ]DIA 12 - [ ]DIA 13 - [ ]DIA 14 - [ ]DIA 15 <br> [ ]DIA 16 - [ ]DIA 17 - [ ]DIA 18 - [ ]DIA 19 - [ ]DIA 20 <br>
 [ ]DIA 21 - [ ]DIA 22 - [ ]DIA 23 - [ ]DIA 24 - [ ]DIA 25 <br> [ ]DIA 26 - [ ]DIA 27 - [ ]DIA 28 - [ ]DIA 29 - [ ]DIA 30 <br>
 [ ]DIA 31 - [ ]DIA 32 - [ ]DIA 33 - [ ]DIA 34 - [ ]DIA 35 <br> [ ]DIA 36 - [ ]DIA 37 - [ ]DIA 38 - [ ]DIA 39 - [ ]DIA 40 <br>
