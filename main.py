@@ -1,3 +1,4 @@
+#from os import path
 import kivy
 from kivy.app import App
 from kivy.core import text
@@ -69,18 +70,32 @@ class CadMadeira(Screen):
 
 class ModificaMadeira(Screen):
 
-
     pass
 
 class ModificacaoDia(Screen):
+    varModDia = []
+    path = ''
     def on_pre_enter(self):
+        self.path = App.get_running_app().user_data_dir+'/'
         print('ENTROU')
+        print(self.path)
+        self.loadData()
+        self.addTelaMad()
+        for madeira in self.varModDia:
+            print(madeira)
 
-        loadData(self):
-            
+    def addTelaMad (self):
+        self.ids.tex_modificacoes.add_widget(MostraMadeira(text=1))
+        
 
-        for madeira in self.madeiras:
-            self.ids.tex_modificacoes.add_widget(MostraMadeira(text=madeira))
+    def loadData(self,*args):
+        try:
+            with open(self.path+DesData.data_string+'/'+str(DesData.data)+'.json','r') as f:
+                print('JSON ENCONTRADO')
+                self.varModDia = json.load(f)
+        except FileNotFoundError:
+            print ('Arquivo não encontrado')
+            pass   
     
 class MostraMadeira(BoxLayout) :
     def __init__(self,text='',**kwargs):
