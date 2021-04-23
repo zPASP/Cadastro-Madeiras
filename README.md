@@ -8,13 +8,9 @@ RELATORIO DIARIO DE DESENVOLVIMENTO.
 ### DESAFIOS
 
  - [X] Dia 1
-> Pegando um projeto o qual já tinha começado iria utilizar ele para
-> começar a minha jornada.<br> O app se trata de controla interno para
-> uma madeireira a qual terá algumas funções que não se encontra no
-> sistema que eles tem no momento e que é de extrema importância para
-> conseguir ter um controle em seu estoque com menos perdas de
-> informações possível. 		A ideia parte em aproveitamento de madeira.
-> Exemplo tem uma madeira com uma medida de 5 centímetro de altura por
+> Pegando um projeto o qual já tinha começado para utilizar ele como começo dessa jornada.<br> O app se trata de controle interno para uma madeireira a qual terá algumas funções que não se encontra no sistema que eles tem no momento e que é de extrema importância para  conseguir ter um controle em seu estoque com menos perdas de informações possível. 
+A ideia parte em aproveitamento de madeira. 
+Exemplo tem uma madeira com uma medida de 5 centímetro de altura por
 > 5cm de largura e 5 metro de comprimento. Podendo aproveitar ela para
 > fazer uma nova madeira com a medida de 2,5cmx5cmx5m 			 No aplicativo
 > estou fazendo a interface das janelas que terá no sistema inicialmente
