@@ -87,7 +87,7 @@ class ModificacaoDia(Screen):
         self.loadData()
         print(self.ids)
         for madeira in self.varModDia:
-            self.add_widget(MostraMadeira(text=madeira))
+            self.ids.add_widget(MostraMadeira(text=madeira))
 
     def addTelaMad (self):
         texto = self.ids.tex
