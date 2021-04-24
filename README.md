@@ -23,6 +23,7 @@ RELATORIO DIARIO DE DESENVOLVIMENTO.
     * Estudo do codigo já feito e percebido a necessidade de algumas alterações, após serem feitas as pequenas mudanças começei voltei a programar no codigo. O json estava funcionando apenas na pasta temporaria do aplicativo a qual não conseguiria persistencia nos dados, estava dando erro ao salvar no padrão que queria. Tentei um lib a qual não estava liberando acesso a pasta do sistema do aplicativo estava dando erro.
 * [DIA 6](#dia6)
     * Inicio pesquisando e estudando as lib de criação de pastas e arquivos então encontrei uma a qual permitia o tipo de modificação que estava querendo, fiz os testes e funcionou, então começei a aplicar ela ao meu codigo. Funcionou e tive a persistencia em meus dados.
+    
 
 <!--te-->
 

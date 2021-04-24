@@ -1,5 +1,4 @@
 #from os import path
-import kivy
 from kivy.app import App
 from kivy.core import text
 from kivy.uix.label import Label
@@ -33,6 +32,7 @@ class CadMadeira(Screen):
     path = ''
 
     def on_pre_enter(self,*args):
+        print(self.ids)
         self.path = App.get_running_app().user_data_dir+'/'
         self.carregarData()
         print(self.path)    
@@ -69,8 +69,13 @@ class CadMadeira(Screen):
 
 
 class ModificaMadeira(Screen):
-
     pass
+
+class JTeste(Screen):
+    def on_pre_enter(self,**kwargs):
+        super().__init__(**kwargs)
+        self.add_widget(MostraMadeira(text='a'))
+        
 
 class ModificacaoDia(Screen):
     varModDia = []
@@ -80,14 +85,14 @@ class ModificacaoDia(Screen):
         print('ENTROU')
         print(self.path)
         self.loadData()
-        self.addTelaMad()
+        print(self.ids)
         for madeira in self.varModDia:
-            print(madeira)
+            self.add_widget(MostraMadeira(text=madeira))
 
     def addTelaMad (self):
-        self.ids.tex_modificacoes.add_widget(MostraMadeira(text=1))
+        texto = self.ids.tex
+        self.ids.tex.add_widget(MostraMadeira(text='a'))
         
-
     def loadData(self,*args):
         try:
             with open(self.path+DesData.data_string+'/'+str(DesData.data)+'.json','r') as f:
@@ -97,7 +102,7 @@ class ModificacaoDia(Screen):
             print ('Arquivo não encontrado')
             pass   
     
-class MostraMadeira(BoxLayout) :
+class Mostramadeira (BoxLayout):
     def __init__(self,text='',**kwargs):
         super().__init__(**kwargs)
         self.ids.label.text = text
