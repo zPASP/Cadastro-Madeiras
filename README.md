@@ -5,31 +5,6 @@ Estou me colocando em um desafio de #100 dias programando o qual ira me trazer m
 
 RELATORIO DIARIO DE DESENVOLVIMENTO.
 =======
-<<<<<<< HEAD
-<!--ts-->
-* [DIA 1](#dia1)
-    * Pegando um projeto o qual já tinha começado iria utilizar ele para começar a minha jornada.<br>
-        O app se trata de controla interno para uma madereira a qual terá algumas funções que não se encontra no sistema que eles tem no momento e que é de extrema importancia para conseguir ter um controle em seu estoque com menos perdas de informações possivel.
-    * A ideia parte em aproveitamento de madeira. Exemplo tem uma madeira com uma medida de 5 centimetro de altura por 5cm de largura e 5 metro de comprimento. Podendo aproveitar ela para fazer uma nova madeira com a medida de 2,5cmx5cmx5m
-    * No aplicativo estou fazendo a intercafe das janelas que terá no sistema inicialmente 4 paginas terá..
-* [DIA 2](#dia2)
-    * Apredizagem de escrita do arquivo README.MD que fica no Github para deixar com uma cara melhor.
-* [DIA 3](#dia3)
-    * Estudo de funcionamento de arquivos JSON e como posso utilizar ele em meus projetos para não perder informações todo vez que ele for encerrado....
-* [DIA 4](#dia4)
-    * Aplicação para alguns empregos na area no cargo de estagiario e para fazer os desafios logicos existentes como parte de teste do processo. A principal ideia em fazer essas aplicações foi em fazer um comparativo em uma posição onde não estou programando com frequencia e no final irie comparar o meu desempenho atual com o futuro. Todos os teste não dão resultado porem pude perceber a dificuldade na parte de conhecimentos espesificos em suas linguagens, como Python e JavaScript.
-* [DIA 5](#dia5)
-    * Estudo do codigo já feito e percebido a necessidade de algumas alterações, após serem feitas as pequenas mudanças começei voltei a programar no codigo. O json estava funcionando apenas na pasta temporaria do aplicativo a qual não conseguiria persistencia nos dados, estava dando erro ao salvar no padrão que queria. Tentei um lib a qual não estava liberando acesso a pasta do sistema do aplicativo estava dando erro.
-* [DIA 6](#dia6)
-    * Inicio pesquisando e estudando as lib de criação de pastas e arquivos então encontrei uma a qual permitia o tipo de modificação que estava querendo, fiz os testes e funcionou, então começei a aplicar ela ao meu codigo. Funcionou e tive a persistencia em meus dados.
-    
-
-<!--te-->
-
-___
-
-=======
->>>>>>> 301aa7c3dfad20e1b2cc0cbd8603f1d2f4d63fe2
 ### DESAFIOS
 
  - [X] Dia 1

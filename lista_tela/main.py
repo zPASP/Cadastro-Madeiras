@@ -13,7 +13,7 @@ class Cadastro(Screen):
     pass
 
 class Exibir(Screen):
-    cadastros = ['a','b','c']
+    cadastros = ['a','b','c','D']
     def on_pre_enter(self):
         for cadastro in self.cadastros:
             self.ids.box_exibir.add_widget(ListarCad(text=cadastro))
