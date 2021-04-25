@@ -8,6 +8,7 @@ RELATORIO DIARIO DE DESENVOLVIMENTO.
 ### DESAFIOS
 
  - [X] Dia 1
+
 > Pegando um projeto o qual já tinha começado para utilizar ele como começo dessa jornada.<br> O app se trata de controle interno para uma madeireira a qual terá algumas funções que não se encontra no sistema que eles tem no momento e que é de extrema importância para  conseguir ter um controle em seu estoque com menos perdas de informações possível. 
 A ideia parte em aproveitamento de madeira. 
 Exemplo tem uma madeira com uma medida de 5 centímetro de altura por
@@ -15,6 +16,7 @@ Exemplo tem uma madeira com uma medida de 5 centímetro de altura por
 > fazer uma nova madeira com a medida de 2,5cmx5cmx5m 			 No aplicativo
 > estou fazendo a interface das janelas que terá no sistema inicialmente
 > 4 paginas.
+
 ----
  - [X] Dia 2
  > Aprendizagem de escrita do arquivo README.MD que fica no GitHub para
@@ -48,16 +50,14 @@ Exemplo tem uma madeira com uma medida de 5 centímetro de altura por
 > Inicio pesquisando e estudando as lib de criação de pastas e arquivos
 > então encontrei uma a qual permitia o tipo de modificação que estava
 > querendo, fiz os testes e funcionou, então comecei a aplicar ela ao
-> meu código. Funcionou e tive a persistência em meus dados.
+meu código. Funcionou e tive a persistência em meus dados.
 ----
 - [X] Dia 7
 >Estudo de como padronizar e globalizar um arquivo. 
 Fiz estudo e teste de funcionamento do mesmo aproveitando que estava de folga.
-Para melhor compreensão pessoal eu fiz um tutorial básico de como fazer para padronizar um app. O Mesmo pode ser verificado com exemplos e explicação **nesse** [***LINK***](https://github.com/zPASP/internacionalizacao) que esta explicando como funciona a marcação das strings e a biblioteca utilizada.
+Para melhor compreensão fiz um tutorial básico de como fazer para padronizar um app. O Mesmo pode ser verificado com exemplos e explicação **nesse** [***LINK***](https://github.com/zPASP/internacionalizacao) que esta explicando como funciona a marcação das strings e a biblioteca utilizada.
  - [ ] Dia 8
-		
- - 
-	 - 
+> Ao me deparar com um erro continuo ao tentar fazer o aplicativo mostra uma lista que iria mostrar todas as madeiras cadastradas resolvi testar o método que estava ocorrendo o erro ( `self.ids.<nome_do_id>.add_widget()` ) em um código de teste. Porem como tive que refazer o código então já aproveitei para deixar o meu código mais limpo e mais organizado aproveitando assim para deixar esse novo como padrão.
  - [ ] Dia 9
 		
  - 
@@ -86,3 +86,4 @@ Para melhor compreensão pessoal eu fiz um tutorial básico de como fazer para p
 		
  - 
 	 - 
+
