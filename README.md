@@ -51,7 +51,7 @@ Exemplo tem uma madeira com uma medida de 5 centímetro de altura por
 > meu código. Funcionou e tive a persistência em meus dados.
 ----
 - [X] Dia 7
-Estudo de como padronizar e globalizar um arquivo. 
+>Estudo de como padronizar e globalizar um arquivo. 
 Fiz estudo e teste de funcionamento do mesmo aproveitando que estava de folga.
 Para melhor compreensão pessoal eu fiz um tutorial básico de como fazer para padronizar um app. O Mesmo pode ser verificado com exemplos e explicação **nesse** [***LINK***](https://github.com/zPASP/internacionalizacao) que esta explicando como funciona a marcação das strings e a biblioteca utilizada.
  - [ ] Dia 8
