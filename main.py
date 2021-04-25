@@ -1,123 +1,58 @@
-#from os import path
 from kivy.app import App
-from kivy.core import text
-from kivy.uix.label import Label
 from kivy.core.window import Window
-from kivy.properties import ListProperty
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.screenmanager import Screen, ScreenManager
+from kivy.uix.screenmanager import ScreenManager, Screen
 import json
-from datetime import date
-import os
 
-
-class Gerenciador(ScreenManager):
+class Janelas(ScreenManager):
     pass
 
 class Menu(Screen):
     pass
 
-class DesData():
-    data = date.today()
-    data_string = str(data)
-    dia = data.strftime("%d")
-    mes = data.strftime("%m")
-    ano = data.strftime("%Y")
-    pass
+class Cadastro(Screen):
+    cadastro = []
 
-class CadMadeira(Screen):
+    def on_pre_enter(self):
+        self.salvarInfo()
+        print(self.cadastro)
 
-    tipoMadeira = ['PINUS','EUCALIPTO']
-    modelosMadeiras = []
-    path = ''
+    def salvarInfo(self,*args):
+        textoCadastrar = self.ids.txt_cadastro.text
+        self.cadastro.append(textoCadastrar)
+        self.ids.txt_cadastro.text = ''
+        with open('dados.json','w') as dados:
+            json.dump(self.cadastro, dados)
+            
+        print(self.cadastro)
+    
 
-    def on_pre_enter(self,*args):
-        print(self.ids)
-        self.path = App.get_running_app().user_data_dir+'/'
-        self.carregarData()
-        print(self.path)    
-        print(DesData.dia)
-        print(DesData.data_string)
-        self.pastaDia()
-        with open(self.path+DesData.data_string+'/'+str(DesData.data)+'.json','w') as f:
-            json.dump(self.modelosMadeiras,f)
 
-    def saveData(self,*args):
-        with open(self.path+DesData.data_string+'/'+str(DesData.data)+'.json','w') as f:
-            json.dump(self.modelosMadeiras,f)
+class Exibir(Screen):
+    cadastro = []
+    def on_pre_enter(self):
+        self.carregarInfo()
+        for cad in self.cadastro:
+            self.ids.box_exibir.add_widget(ListarCad(text=cad))
 
-    def carregarData(self,*args):
+    def removerCadastro(self,ListarCad):
+        self.ids.box_exibir.remove_widget(ListarCad)
+
+    def carregarInfo(self,*args):
         try:
-            with open(self.path+DesData.data_string+'/'+str(DesData.data)+'.json','r') as f:
-                self.modelosMadeiras = json.load(f)
-        except FileNotFoundError:
+            with open('dados.json','r') as dados:
+                self.cadastro = json.load(dados)
+        except fileNotFoundError:
             pass
 
-    def salvarMadeira(self):
-        modelo = (self.ids.tipoMadeira.text+' - '+self.ids.nomeMadeira.text)
-        self.ids.nomeMadeira.text = ''
-        self.modelosMadeiras.append(modelo)
-        self.saveData()
 
-    def pastaDia(self):
-        pastadoDia = self.path+DesData.data_string
-
-        if not os.path.exists(pastadoDia):
-            os.makedirs(pastadoDia)
-        
-
-
-
-class ModificaMadeira(Screen):
-    pass
-
-class JTeste(Screen):
-    def on_pre_enter(self,**kwargs):
-        super().__init__(**kwargs)
-        self.add_widget(MostraMadeira(text='a'))
-        
-
-class ModificacaoDia(Screen):
-    varModDia = []
-    path = ''
-    def on_pre_enter(self):
-        self.path = App.get_running_app().user_data_dir+'/'
-        print('ENTROU')
-        print(self.path)
-        self.loadData()
-        print(self.ids)
-        for madeira in self.varModDia:
-            self.ids.add_widget(MostraMadeira(text=madeira))
-
-    def addTelaMad (self):
-        texto = self.ids.tex
-        self.ids.tex.add_widget(MostraMadeira(text='a'))
-        
-    def loadData(self,*args):
-        try:
-            with open(self.path+DesData.data_string+'/'+str(DesData.data)+'.json','r') as f:
-                print('JSON ENCONTRADO')
-                self.varModDia = json.load(f)
-        except FileNotFoundError:
-            print ('Arquivo não encontrado')
-            pass   
-    
-class Mostramadeira (BoxLayout):
+class ListarCad(BoxLayout):
     def __init__(self,text='',**kwargs):
-        super().__init__(**kwargs)
+        super(ListarCad, self).__init__(**kwargs)
         self.ids.label.text = text
 
-class Myapp (App):
+class Test(App):
     def build(self):
-        return Gerenciador()
+        return Janelas()
 
-Myapp().run()
-
-
- #def verificaArquivo(self):
-    #    try:
-    #        f = open(self.path+self.DesData.data+'.json')
-    #        f.close
-    #        return (True)
-    #    except:
-    #        return (True)
+Test().run()
