@@ -27,7 +27,6 @@ class Cadastro(Screen):
         print(self.cadastro)
     
 
-
 class Exibir(Screen):
     cadastro = []
     def on_pre_enter(self):
@@ -50,6 +49,9 @@ class ListarCad(BoxLayout):
     def __init__(self,text='',**kwargs):
         super(ListarCad, self).__init__(**kwargs)
         self.ids.label.text = text
+
+class Modificacoes(Screen):
+    pass
 
 class Test(App):
     def build(self):

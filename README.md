@@ -61,7 +61,6 @@ Para melhor compreensão fiz um tutorial básico de como fazer para padronizar u
  - [ ] Dia 9
 		
  - 
-	 - 
 - [ ] Dia 10
 		
  - 

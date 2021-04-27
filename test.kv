@@ -5,7 +5,8 @@
         name: 'cadastro'
     Exibir: 
         name: 'exibir'
-
+    Modificacoes:
+        name: 'modificacoes'
 <Menu>:
     canvas:     
         Color: 
@@ -18,46 +19,59 @@
         padding: '30dp'
         spacing: 50
         bg_color: (1,0,0,.5)
-        Button:
+
+        Button: #cadastro
             background_color: (1.0,0.0,0.0,1.0)
             font_size: (30/100)*self.height
             text: 'CADASTRAR'
             on_release: app.root.current = 'cadastro'
-        Button: 
+        Button: #modificações
+            background_color: (1.0,0.0,0.0,1.0)
+            font_size: (30/100)*self.height
+            text: 'MODIFICAÇÃO'
+            on_release: app.root.current = 'modificacoes'
+        Button: #listar/exibir
             background_color: (1.0,0.0,0.0,1.0)
             font_size: (30/100)*self.height
             text: 'EXIBIR'
             on_release: app.root.current = 'exibir'
-        Button: 
+        Button: #fechar
             background_color: (1.0,0.0,0.0,1.0)
             font_size: (30/100)*self.height
             text: 'FECHAR'
             on_release: app.stop()
 
 <Cadastro>:
-    BoxLayout: 
+    BoxLayout:
         orientation: 'vertical'
-        size_hint: .5, .5 
-        pos_hint: {'center_x': .5, 'center_y': .5}
-        padding: '50dp'
-        spacing: '80sp'        
-        TextInput:
+        ActionBar:
+            ActionView:
+                ActionPrevious:
+                    title: 'APP'
+                    on_release: 'menu'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: .5, .5 
             pos_hint: {'center_x': .5, 'center_y': .5}
-            size_hint: None, None 
-            spacing_y: '20dp'
-            size_hint_y: None
-            height: '100dp'
-            width: '600dp'
-            id: txt_cadastro
-            multiline: False
-            font_size: (90/100)*self.height
-        Button:
-            pos_hint: {'center_x': .5, 'center_y': .5}
-            text:'CADASTRAR'
-            size_hint: None, None
-            width: '200dp'
-            height: '100dp'
-            on_release: root.salvarInfo()
+            padding: '50dp'
+            spacing: '80sp'        
+            TextInput:
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                size_hint: None, None 
+                spacing_y: '20dp'
+                size_hint_y: None
+                height: '100dp'
+                width: '600dp'
+                id: txt_cadastro
+                multiline: False
+                font_size: (90/100)*self.height
+            Button:
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                text:'CADASTRAR'
+                size_hint: None, None
+                width: '200dp'
+                height: '100dp'
+                on_release: root.salvarInfo()
 <Exibir>:
     BoxLayout:
         orientation: 'vertical'
@@ -81,3 +95,13 @@
         size_hint_x: None
         width: '80dp'
         on_release: app.root.get_screen('exibir').removerCadastro(root)
+
+
+<Modificacoes>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Qual Madeira Utilizada:'
+        Spinner:
+            text: 'selecionar'
+            values: '1'
