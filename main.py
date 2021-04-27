@@ -42,21 +42,19 @@ class Exibir(Screen):
         except fileNotFoundError:
             pass
 
-
 class ListarCad(BoxLayout):
     def __init__(self,text='',**kwargs):
         super(ListarCad, self).__init__(**kwargs)
         self.ids.label.text = text
 
 class Modificacoes(Screen):
-    medidas = []    
-    tipos = ['PINUS','EUCALIPTO']
-    def on_pre_enter(self,*args):
+    medidas = []
+    tipos = []
+    def on_pre_enter(self):
         try:
             with open('dados.json','r') as dados:
                 self.medidas = json.load(dados)
-                print('buscou')
-                print(self.medidas)
+                self.tipos = ['PINUS','EUCALIPTO']
         except fileNotFoundError:
             pass
         print(self.medidas)
