@@ -48,7 +48,7 @@
             ActionView:
                 ActionPrevious:
                     title: 'APP'
-                    on_release: 'menu'
+                    on_release: app.root.current = 'menu'
         BoxLayout:
             orientation: 'vertical'
             size_hint: .5, .5 
@@ -75,6 +75,11 @@
 <Exibir>:
     BoxLayout:
         orientation: 'vertical'
+        ActionBar:
+            ActionView:
+                ActionPrevious:
+                    title: 'APP'
+                    on_release: app.root.current = 'menu'
         ScrollView:
             BoxLayout:
                 id: box_exibir
@@ -100,8 +105,18 @@
 <Modificacoes>:
     BoxLayout:
         orientation: 'vertical'
+        ActionBar:
+            ActionView:
+                ActionPrevious:
+                    title: 'APP'
+                    on_release: app.root.current = 'menu'
         Label:
             text: 'Qual Madeira Utilizada:'
         Spinner:
-            text: 'selecionar'
-            values: '1'
+            text: 'TIPO DE MADEIRA'
+            values: root.tipos
+        Spinner:
+            text: 'MEDIDA DA MADEIRA'
+            values: root.medidas
+        Button:
+            text: 'SALVAR'

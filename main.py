@@ -14,7 +14,6 @@ class Cadastro(Screen):
     cadastro = []
 
     def on_pre_enter(self):
-        self.salvarInfo()
         print(self.cadastro)
 
     def salvarInfo(self,*args):
@@ -23,7 +22,6 @@ class Cadastro(Screen):
         self.ids.txt_cadastro.text = ''
         with open('dados.json','w') as dados:
             json.dump(self.cadastro, dados)
-            
         print(self.cadastro)
     
 
@@ -51,7 +49,17 @@ class ListarCad(BoxLayout):
         self.ids.label.text = text
 
 class Modificacoes(Screen):
-    pass
+    medidas = []    
+    tipos = ['PINUS','EUCALIPTO']
+    def on_pre_enter(self,*args):
+        try:
+            with open('dados.json','r') as dados:
+                self.medidas = json.load(dados)
+                print('buscou')
+                print(self.medidas)
+        except fileNotFoundError:
+            pass
+        print(self.medidas)
 
 class Test(App):
     def build(self):
