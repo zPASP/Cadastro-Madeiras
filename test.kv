@@ -111,16 +111,24 @@
                     title: 'APP'
                     on_release: app.root.current = 'menu'
         Label:
-            text: 'Qual Madeira Utilizada:'
-        Spinner:
-            text: 'TIPO DE MADEIRA'
-            values: root.tipos
-            text_autoupdate: True
-            sync_height: True
+            text: 'Madeira utilizada:'
+            font_size: '50dp'
+        BoxLayout:
+            Label:
+                text: 'TIPO'
+                pos_hint: {''}
+            Spinner:
+                text: 'TIPO DE MADEIRA'
+                values: root.tipos
+                text_autoupdate: True
+                sync_height: True
         Spinner:
             text: 'MEDIDA DA MADEIRA'
             text_autoupdate: True
             values: root.medidas
             sync_height: True
+        Spinner:
+            text: ''
+
         Button:
             text: 'SALVAR'

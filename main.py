@@ -49,6 +49,7 @@ class ListarCad(BoxLayout):
 
 class Modificacoes(Screen):
     medidas = []
+    tipos = ['PINUS','EUCALIPTO']
 
     try:
         with open('dados.json','r') as dados:
@@ -56,7 +57,7 @@ class Modificacoes(Screen):
     except fileNotFoundError:
         pass
 
-    tipos = ['PINUS','EUCALIPTO']
+    
     def carregarInfo(self,*args):
         try:
             with open('dados.json','r') as dados:
@@ -65,7 +66,6 @@ class Modificacoes(Screen):
             pass
     
     def on_pre_enter(self):
-        self.carregarInfo()
         print(self.medidas)
 
     
