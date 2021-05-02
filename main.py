@@ -45,18 +45,19 @@ class Exibir(Screen):
 class ListarCad(BoxLayout):
     def __init__(self,text='',**kwargs):
         super(ListarCad, self).__init__(**kwargs)
-        self.ids.label.text = text    
+        self.ids.label.text = text
+
+class ModiJson():
+    def carregarJson():
+        try:
+            with open('dados.json','r') as dados:
+                return json.load(dados)
+        except fileNotFoundError:
+            return 0    
 
 class Modificacoes(Screen):
-    medidas = []
+    medidas = ModiJson.carregarInfo()
     tipos = ['PINUS','EUCALIPTO']
-
-    try:
-        with open('dados.json','r') as dados:
-            medidas = json.load(dados)
-    except fileNotFoundError:
-        pass
-
     
     def carregarInfo(self,*args):
         try:
