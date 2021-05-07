@@ -56,7 +56,7 @@ class ModiJson():
             return 0    
 
 class Modificacoes(Screen):
-    medidas = ModiJson.carregarInfo()
+    medidas = ModiJson.carregarJson()
     tipos = ['PINUS','EUCALIPTO']
     
     def carregarInfo(self,*args):
