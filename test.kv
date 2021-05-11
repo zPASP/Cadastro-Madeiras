@@ -110,6 +110,16 @@
                 ActionPrevious:
                     title: 'APP'
                     on_release: app.root.current = 'menu'
+                ActionButton: #são aceitos apenas itens exclusivo chamados de actionItens detro do actionview
+                    text: 'MENU'
+                    on_release: app.root.current= 'menu'
+                ActionSeparator:
+                ActionOverflow:
+                    ActionButton:
+                        text: 'a'
+                ActionButton:
+                    text: 'SAIR'
+                    on_release: app.stop()
         Label:
             text: 'Madeira utilizada:'
             font_size: '50dp'
